@@ -1,8 +1,10 @@
-#include <iostream>
+#include "crow.h"
 
 int main()
 {
-    std::cout << "Hello world\n";
+    crow::SimpleApp app;
 
-    return 0;
+    CROW_ROUTE(app, "/")([]() { return "Hello world"; });
+
+    app.port(18080).multithreaded().run();
 }

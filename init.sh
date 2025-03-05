@@ -7,6 +7,10 @@ REPO_DIR="cmake-helper"
 CROW_DIR="Crow"
 CROW_REPO="https://github.com/CrowCpp/Crow.git"
 
+# Путь к папке, в которой будет располагаться репозиторий Asio
+ASIO_DIR="asio"
+ASIO_REPO="https://github.com/chriskohlhoff/asio.git"
+
 # Работа с cmake-helper репозиторием
 if [ -d "$REPO_DIR" ]; then
     cd "$REPO_DIR" || exit
@@ -23,4 +27,13 @@ if [ -d "$CROW_DIR" ]; then
     cd ..
 else
     git clone "$CROW_REPO"
+fi
+
+# Работа с Asio репозиторием
+if [ -d "$ASIO_DIR" ]; then
+    cd "$ASIO_DIR" || exit
+    git pull origin master
+    cd ..
+else
+    git clone "$ASIO_REPO"
 fi

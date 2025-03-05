@@ -4,6 +4,7 @@ bin
 lib
 cmake-helper
 Crow
+asio
 
 # C++ objects and libs
 *.slo
