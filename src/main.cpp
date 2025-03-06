@@ -1,10 +1,8 @@
-#include "crow.h"
+#include "api/routes.h"
 
 int main()
 {
     crow::SimpleApp app;
-
-    CROW_ROUTE(app, "/")([]() { return "Hello world"; });
-
+    Routes routes(app);
     app.port(18080).multithreaded().run();
 }
