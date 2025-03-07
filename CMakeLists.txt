@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include(cmake-helper/cmake-helper.cmake)
 include_directories(${CMAKE_SOURCE_DIR}/Crow/include)
 include_directories(${CMAKE_SOURCE_DIR}/asio/asio/include)
+include_directories(${CMAKE_SOURCE_DIR}/src)
 
 use_qt5()
 
