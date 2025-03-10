@@ -5,6 +5,7 @@
 class BaseField : public BaseScheme {
 public:
     BaseField(std::string fieldName, crow::json::type fieldType, bool required = true);
+    virtual ~BaseField() = default;
 
     // BaseScheme interface
 public:

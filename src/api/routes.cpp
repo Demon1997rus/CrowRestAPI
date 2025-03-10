@@ -2,5 +2,5 @@
 
 Routes::Routes(crow::SimpleApp &app)
 {
-    CROW_ROUTE(app, "/calculate").methods("POST"_method)(Handlers::calculateHandler);
+    CROW_ROUTE(app, "/calculate").methods(crow::HTTPMethod::POST)(Handlers::calculateHandler);
 }

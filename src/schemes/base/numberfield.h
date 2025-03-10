@@ -18,6 +18,8 @@ public:
     {
     }
 
+    virtual ~NumberField() = default;
+
     // BaseScheme interface
 public:
     void validate(const crow::json::rvalue &data) const override
